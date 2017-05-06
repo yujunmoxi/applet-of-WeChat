@@ -1,0 +1,40 @@
+<!--pages/movie/moive.wxml-->
+<!--<audio 
+poster="{{music.poster}}"
+ name="{{music.name}}" 
+ author="{{music.author}}" 
+ src="{{music.src}}" 
+ id="myAudio"
+  controls 
+  bindended="endedHandle"></audio>
+  <view class="view">
+    <button type="primary" bindtap="audioPlay" class="btn">播放</button>
+    <button type="primary" bindtap="audioPause" class="btn">暂停</button>
+    <button type="primary" bindtap="audio14" class="btn">快进</button>
+    <button type="primary" bindtap="audioStart" class="btn">回到开头</button>
+</view>-->
+<!--<button type="primary" bindtap="audio14">设置当前播放时间为14秒</button>
+
+-->
+<view class="section tc">
+  <video src="{{music.src}}"   controls ></video>
+  <view class="btn-area">
+    <button bindtap="bindButtonTap">获取视频</button>
+    
+  </view>
+</view>
+<scroll-view  scroll-y="true" >
+    <view wx:for="{{musicList}}"
+     wx:for-item="music" 
+     wx:for-index="idx"    
+     wx:key="{{idx}}"
+     class="music">
+        <view class="musicPoster">
+            <image src="{{music.poster}}" data-idx="{{idx}}" bindtap="playMusic"></image>
+        </view>
+        <view class="author">
+            <view class="musicName">电影：{{music.name}}</view>
+            <view class="musicAuthor">导演：{{music.author}}</view>
+        </view>
+     </view>
+</scroll-view>

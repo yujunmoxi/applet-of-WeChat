@@ -1,0 +1,21 @@
+<view class="section tc">
+  <video src="{{music.src}}"   controls ></video>
+  <view class="btn-area">
+    <button bindtap="bindButtonTap">获取视频</button>
+    
+  </view>
+</view>
+<scroll-view scroll-y="true"
+ style="height: {{scrollHeight}}px;" bindscrolltoupper="refresh" bindscrolltolower="loadMore" bindscroll="scroll">
+<view wx:for="{{list}}" wx:key="{{index}}" class="list">
+ 
+    <image src="{{item.pic_url}}" bindtap="showDetail" data-id="{{item.id}}"></image>
+    <!--<view>{{item.name}}</view>-->
+   <view class="right">{{item.precondition}}</view>
+</view>  
+</scroll-view>
+<view class="body-view">
+    <loading hidden="{{hidden}}" bindchange="loadChange">
+        数据加载中....
+    </loading>
+</view>

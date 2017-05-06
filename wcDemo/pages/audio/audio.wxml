@@ -1,0 +1,44 @@
+<!--pages/audio/audio.wxml-->
+
+<audio 
+poster="{{music.poster}}"
+ name="{{music.name}}" 
+ author="{{music.author}}" 
+ src="{{music.src}}" 
+ id="myAudio"
+ controls
+  bindended="endedHandle"
+  bindtimeupdate="pro"
+  ></audio>
+  <progress class="progress" percent="{{count}}"  />
+  <view class="play-music">
+  <view class="icon-play">
+        <image src="../../icons/last-v.png" bindtap="preventPlay"  ></image>
+        <image src="../../icons/play.png"  bindtap="audioPlay" id="stop"></image>
+        <image src="../../icons/next-v.png" bindtap="nextPlay" ></image>
+    </view>
+    </view>
+<view class="lrc">{{musicText}}</view>
+<view class="iconsmall">
+    <image src="../../icons/xiangyun.jpg"></image>
+</view>
+<scroll-view  scroll-y="true" style="height: {{scrollHeight}}px">
+     <view class="myTitle">祥云热歌榜:</view>
+    <view wx:for="{{musicList}}"
+     wx:for-item="music" 
+     wx:for-index="idx"    
+     wx:key="{{idx}}"
+     class="music">
+        <view class="musicPoster">
+            <image src="{{music.poster}}" data-idx="{{idx}}" bindtap="playMusic"></image>
+        </view>
+        <view class="right">
+            <view class="musicName">{{music.name}}</view>
+            <view class="musicAuthor">{{music.author}}</view>
+            <!--<view class="iconright">
+    <image src="../../icons/xiangyun.jpg"></image>
+</view>-->
+        </view>
+        
+     </view>
+</scroll-view>

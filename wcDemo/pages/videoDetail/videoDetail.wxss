@@ -1,0 +1,55 @@
+.list { font-size: 24rpx; }
+/* pages/movie/moive.wxss */
+.music{
+    padding: 20rpx;
+    overflow:hidden;
+}
+#myAudio{
+    padding:20rpx;
+}
+.view{
+    overflow: hidden;
+}
+.btn{
+   width:170rpx;
+   float:left;
+   font-size: 30rpx;
+   padding:0rpx 5rpx;
+   margin:0rpx 5rpx;
+}
+.musicPoster{
+    float:left;
+}
+image {
+width:250rpx;
+height:220rpx;
+display:inline-block;
+overflow:hidden;
+border-radius: 50%;
+}
+.author{
+    float:left;
+    width:450rpx;
+    margin-top:15rpx;
+}
+.musicName{
+    margin-left:20rpx;
+    font-size: 30rpx;
+    padding:30rpx 60rpx;
+    background-color:#eef; 
+    color:#000;
+}
+.musicAuthor{
+    margin-left:20rpx;
+    font-size: 30rpx;
+    padding:30rpx 60rpx;
+    background-color:#eee; 
+    box-shadow: 3rpx 3rpx 3rpx #000;
+    color:#000;
+}
+
+video {
+width:760rpx;
+height:550rpx;
+
+}
