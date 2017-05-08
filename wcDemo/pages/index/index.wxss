@@ -17,5 +17,9 @@
 }
 
 .usermotto {
-  margin-top: 200px;
+  margin-top: 300px;
+}
+.container{
+  background-image: url(../../icons/bg2.png) ;
+  opacity: .7;
 }

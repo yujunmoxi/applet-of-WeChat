@@ -3,16 +3,14 @@
 var app = getApp()
 Page({
   data: {
-    motto: '您好,我亲爱的小程序!',
+    motto: '',
     userInfo: {}
      
   },
   //事件处理函数
   bindViewTap: function() {
-    wx.navigateTo({
+    wx.switchTab({
       url: '../aboutme/aboutme'
-    // wx.switchTab({
-    //   url: '../aboutme/aboutme'
      })
   },
   onLoad: function () {

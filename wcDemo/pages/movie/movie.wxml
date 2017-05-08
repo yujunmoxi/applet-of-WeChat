@@ -1,5 +1,6 @@
 <view class="in_theaters">
-    <view class="fonting"><image src="../../icons/logo.jpg"></image></view>
+    <view class="fonting">热映</view>
+    <view class="dddd"><image src="../../icons/logo.jpg"></image></view>
     <scroll-view scroll-y="true" class="movieItem" style="height:{{scrollHeight}}px"                bindscrolltoupper="refresh" bindscrolltolower="loadMore">
         <view class="tab_movie" wx:for="{{movieList}}"
         wx:for-item="movieList"
